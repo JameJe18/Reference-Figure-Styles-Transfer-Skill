@@ -1,0 +1,7 @@
+interface:
+  display_name: "Reference figure styles transfer skill"
+  short_description: "Learn paper figure style and apply it to plotting code"
+  default_prompt: "Use $reference-figure-styles-transfer to extract this paper figure style and apply it to my existing plotting code without changing results."
+
+policy:
+  allow_implicit_invocation: true

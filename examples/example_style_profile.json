@@ -1,0 +1,325 @@
+{
+  "schema": "figure-style/StyleLearningBundle@1",
+  "version": "1.0.0",
+  "created_at": "2026-11-14",
+  "source_document": {
+    "absolute_path": "reference.pdf",
+    "sha256": null,
+    "title": "Generic dual-family scientific figure reference",
+    "page_count": null,
+    "figure_scope": "One conceptual workflow and one quantitative result figure.",
+    "extraction_method": "Replace with the actual extraction command and renderer.",
+    "limitations": [
+      "Reference figures were raster-only, so exact font family is unverified.",
+      "Spacing values are design guidance, not recovered vector geometry."
+    ]
+  },
+  "inventory": {
+    "figure_count": 2,
+    "figures": [
+      {
+        "figure": "Figure 1",
+        "page": 1,
+        "caption": "Conceptual workflow of the analytical pipeline.",
+        "image_path": null,
+        "width_px": null,
+        "height_px": null,
+        "aspect_ratio": null,
+        "status": "keep",
+        "reason": "Defines the conceptual_framework family."
+      },
+      {
+        "figure": "Figure 2",
+        "page": 2,
+        "caption": "Multi-panel quantitative comparison of methods and controls.",
+        "image_path": null,
+        "width_px": null,
+        "height_px": null,
+        "aspect_ratio": null,
+        "status": "keep",
+        "reason": "Defines the statistical_results family."
+      }
+    ],
+    "contact_sheet": null
+  },
+  "shared_style_model": {
+    "design_positioning": "Restrained evidence-first scientific design with flat pale semantic regions in diagrams and minimal white-canvas quantitative plots.",
+    "style_families": {
+      "conceptual_framework": {
+        "composition": "Pipeline or storyboard with a clear reading path and one dominant central region.",
+        "regions": "Rounded cards inside dashed semantic containers, with generous white gutters.",
+        "marks": "Rounded boxes, thin connectors, small arrowheads, simple legend samples.",
+        "strokes": "Thin-to-medium same-hue outlines; no shadow, bevel, or texture.",
+        "fills": "Low-saturation flat semantic fills on a white canvas.",
+        "color_roles": {
+          "blue": "input/reference",
+          "green": "processing/validation",
+          "gold": "selected candidate or key result",
+          "purple": "integration or secondary mechanism",
+          "red": "external or exception branch",
+          "gray": "neutral context"
+        },
+        "typography": "Sans-serif character; bold colored headings and regular dark body text.",
+        "emphasis": "Use scale and pale area concentration for the hero region; reserve strong hue for headings and focal structure.",
+        "avoid": [
+          "gradients",
+          "drop shadows",
+          "unlabeled arrows",
+          "saturating every region equally"
+        ]
+      },
+      "statistical_results": {
+        "composition": "Flat 1x2, 1x3, or 2x2 panel grid with bold panel letters.",
+        "regions": "White canvas, modest outer margins, clear gutters, thin left/bottom axes.",
+        "marks": "Small circles, triangles, squares, thin intervals, pale background points.",
+        "strokes": "Fine black/gray axes; dotted reference guides; thin error bars and connectors.",
+        "fills": "White background with small strong marker fills and occasional pale uncertainty bands.",
+        "color_roles": {
+          "blue": "reference/observed",
+          "orange": "alternate/focal comparison",
+          "teal": "third series",
+          "gold": "leading exception",
+          "gray": "control/background"
+        },
+        "typography": "Serif character for quantitative panels; bold panel letters, regular axes and legends.",
+        "emphasis": "Pale background and strong focal marks; direct values replace unnecessary chart chrome.",
+        "avoid": [
+          "heavy gridlines",
+          "rainbow palettes",
+          "thick axes",
+          "oversized legends",
+          "color-only encoding"
+        ]
+      }
+    },
+    "palette": {
+      "canvas": "#FFFFFF",
+      "ink": {
+        "primary": "#262626",
+        "secondary": "#5B5B5B",
+        "neutral": "#8D949C"
+      },
+      "diagram": {
+        "blue_fill": "#D4E9FC",
+        "green_fill": "#CEE9D4",
+        "gold_fill": "#FFF2CC",
+        "purple_fill": "#E8D6E8",
+        "red_fill": "#FFCFCD",
+        "neutral_fill": "#F5F5F5"
+      },
+      "statistical": {
+        "blue": "#0073B6",
+        "orange": "#F35E00",
+        "teal": "#009F71",
+        "gold": "#E3B74F",
+        "gray": "#7A7A7A"
+      },
+      "rules": [
+        "Use no more than three primary hues in one quantitative panel.",
+        "Pair color with marker shape or line style.",
+        "Use pale fills only for large semantic areas; use strong color on small data marks."
+      ]
+    },
+    "typography": {
+      "observed": "Dual family: sans-serif for the workflow, serif for quantitative figures.",
+      "exact_font_status": "Unknown because the reference is raster-only.",
+      "recommended_at_180_mm": {
+        "panel_letter": "10-12 pt bold",
+        "axis_title": "8.5-9.5 pt regular",
+        "tick_label": "7.5-8 pt regular",
+        "legend": "7-8 pt regular"
+      }
+    },
+    "geometry_and_spacing": {
+      "outer_margin_fraction": "0.04-0.08",
+      "horizontal_panel_gap_fraction": "0.07-0.14",
+      "vertical_panel_gap_fraction": "0.08-0.14",
+      "panel_letter_position": "upper-left, slightly above or inside the axes",
+      "diagram_corner_treatment": "moderate rounding for cards; stronger rounding for group containers"
+    },
+    "marks_and_strokes": {
+      "axes": "thin black or dark gray left/bottom spines",
+      "guides": "dotted or dashed gray, visually subordinate",
+      "diagram_connector": "thin line with a small triangular arrowhead",
+      "background_points": "small and pale",
+      "focal_points": "larger or darker, with a distinct marker shape"
+    },
+    "avoid": [
+      "3D charts",
+      "gradients and bevels",
+      "multiple competing legends",
+      "oversaturated large regions",
+      "copying reference labels or topology"
+    ]
+  },
+  "transfer_policy": {
+    "reuse": [
+      "type-specific composition",
+      "semantic color roles",
+      "color-shape redundancy",
+      "white space and grid alignment",
+      "thin axes and compact legends",
+      "pale-to-strong evidence hierarchy"
+    ],
+    "do_not_copy": [
+      "reference labels",
+      "reference values and claims",
+      "reference method topology",
+      "exact panel counts unless the target science calls for them"
+    ],
+    "figure_type_mapping": {
+      "workflow": "conceptual_framework",
+      "multi_panel_results": "statistical_results"
+    }
+  },
+  "figures": [
+    {
+      "schema": "academic-figure/ReferenceAnalysis@1",
+      "reference_id": "example-fig-01",
+      "source": {
+        "url_or_absolute_path": "reference.pdf",
+        "local_absolute_path": null,
+        "page_or_figure": "Page 1; Figure 1",
+        "caption": "Conceptual workflow of the analytical pipeline.",
+        "size": {
+          "width_px": null,
+          "height_px": null,
+          "aspect_ratio": null
+        }
+      },
+      "semantic_structure": {
+        "components": [
+          "data input",
+          "processing",
+          "selection",
+          "final evidence"
+        ],
+        "groups": [
+          "discovery region",
+          "validation region"
+        ],
+        "edges": [
+          "input to processing",
+          "processing to selection"
+        ],
+        "reading_order": "left-to-right, then top-to-bottom",
+        "uncertainties": [
+          "Scientific labels are omitted from this generic example."
+        ]
+      },
+      "style_grammar": {
+        "composition": "pipeline",
+        "regions": "asymmetric module layout with open dashed groups",
+        "marks": "rounded cards, arrows, small key-result callout",
+        "strokes": "thin same-hue outlines",
+        "fills": "flat pastel semantic surfaces",
+        "color_roles": {
+          "blue": "input",
+          "green": "processing",
+          "gold": "selected result",
+          "purple": "integration",
+          "red": "validation"
+        },
+        "typography": "sans-serif with bold headings",
+        "motifs": [
+          "stage cards",
+          "group containers",
+          "arrow flow"
+        ],
+        "emphasis": "central selected result",
+        "avoid": [
+          "shadows",
+          "saturated full-region color"
+        ]
+      },
+      "transfer_policy": {
+        "reuse": [
+          "pipeline composition",
+          "pastel semantic grouping",
+          "thin arrow grammar"
+        ],
+        "do_not_copy": [
+          "reference labels",
+          "reference topology"
+        ]
+      },
+      "confidence": "high"
+    },
+    {
+      "schema": "academic-figure/ReferenceAnalysis@1",
+      "reference_id": "example-fig-02",
+      "source": {
+        "url_or_absolute_path": "reference.pdf",
+        "local_absolute_path": null,
+        "page_or_figure": "Page 2; Figure 2",
+        "caption": "Multi-panel quantitative comparison of methods and controls.",
+        "size": {
+          "width_px": null,
+          "height_px": null,
+          "aspect_ratio": null
+        }
+      },
+      "semantic_structure": {
+        "components": [
+          "quantitative panel A",
+          "quantitative panel B",
+          "control distribution",
+          "legend"
+        ],
+        "groups": [
+          "reference",
+          "alternate",
+          "control"
+        ],
+        "edges": [],
+        "reading_order": "A then B",
+        "uncertainties": [
+          "Scientific labels are omitted from this generic example."
+        ]
+      },
+      "style_grammar": {
+        "composition": "1x2 statistical result grid",
+        "regions": "white canvas with thin axes and clear gutters",
+        "marks": "focal points, pale control points, thin intervals",
+        "strokes": "fine axes and dotted guides",
+        "fills": "small strong marker fills and pale uncertainty bands",
+        "color_roles": {
+          "blue": "reference",
+          "orange": "alternate",
+          "gray": "control"
+        },
+        "typography": "serif with bold panel letters",
+        "motifs": [
+          "panel letter",
+          "compact legend",
+          "color-shape encoding"
+        ],
+        "emphasis": "strong focal points against pale controls",
+        "avoid": [
+          "heavy gridlines",
+          "unnecessary chart borders"
+        ]
+      },
+      "transfer_policy": {
+        "reuse": [
+          "white canvas",
+          "serif hierarchy",
+          "blue-orange-gray comparison"
+        ],
+        "do_not_copy": [
+          "reference labels",
+          "reference values"
+        ]
+      },
+      "confidence": "high"
+    }
+  ],
+  "quality_control": {
+    "figure_count_check": "Example contains two generic reference analyses.",
+    "visual_review": "Illustrative template only; replace with inspected source figures.",
+    "known_limitations": [
+      "This example intentionally contains no third-party figure assets.",
+      "Exact fonts and vector weights are not available."
+    ]
+  }
+}
